@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DClass } from '../services/blizz-interfaces';
+import { BlizzardMediaAPIService } from '../services/media.service';
 
 @Component({
   selector: 'app-hero-card',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mediaService: BlizzardMediaAPIService) { }
+
+  @Input()
+  public class: DClass = null;
 
   ngOnInit() {
   }

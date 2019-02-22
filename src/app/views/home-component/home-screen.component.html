@@ -1,5 +1,5 @@
 <p>
   <button (click)='log()' igxButton>Click Me!</button>
-  <ng-container *ngFor="let class of classes | async">
-  </ng-container>
+    <app-hero-card *ngFor="let class of classes | async" [class]="class">
+    </app-hero-card>
 </p>

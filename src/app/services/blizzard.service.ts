@@ -15,7 +15,6 @@ export class BlizzardAPIService {
     public localeString: Locale = Locale.EN;
     public region: Region = Region.US;
     private _classes: DClass[] = null;
-    private _authRequest: Observable<any>;
     private _classRequest: Observable<DClass[]>;
     get oauth_request_header(): {
         Authorization: string
