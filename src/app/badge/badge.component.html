@@ -1,3 +1,6 @@
-<igx-avatar class="skill__image" [src]="image" [roundShape]="passive" size="medium">
-</igx-avatar>
-<ng-content></ng-content>
+<h5 class="skill__name">{{ name }}</h5>
+<div class="skill__details">
+    <igx-avatar class="skill__image" [src]="image" [roundShape]="passive" size="medium">
+    </igx-avatar>
+    <ng-content></ng-content>
+</div>

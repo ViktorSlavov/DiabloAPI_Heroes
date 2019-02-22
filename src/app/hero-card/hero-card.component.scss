@@ -7,12 +7,38 @@ igx-expansion-panel {
     padding: 8px;
 }
 
+.hero__name {
+    font-size: 20px;
+    padding: 16px;
+}
+
+.hero__image {
+    border: 2px solid #a39f5a;
+}
+
 .skill {
     display: flex;
     flex-flow: column;
+    width: 50%;
     padding: 0px 4px;
 
+
     h4 {
-        padding: 4px;
+        padding: 8px;
+        text-shadow: 1px 1px #826402;
+    }
+
+    .skill__header--active {
+        color: #cab07a;
+    }
+
+    .skill__header--passive {
+        color: #adaba7;
+    }
+
+    .skill__description {
+        font-family: sans-serif;
+        width: 80%;
     }
 }
+

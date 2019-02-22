@@ -1,8 +1,8 @@
 <igx-card>
-  <igx-card-header class="compact">
-    <igx-avatar [src]="mediaService.getUrl(class.icon, 'portraits', '64')" roundShape="true"></igx-avatar>
-    <div class="igx-card-header__tgroup">
-      <h3 class="igx-card-header__title--small">{{ class.name.toUpperCase() }}</h3>
+  <igx-card-header class="hero__header">
+    <igx-avatar class="hero__image" [src]="mediaService.getUrl(class.icon, types.portrait, sizes.large)" size="medium" roundShape="true"></igx-avatar>
+    <div>
+      <h3 class="hero__name">{{ class.name.toUpperCase() }}</h3>
     </div>
     <button igxButton (click)="heroSkills.toggle($event)">
       <igx-icon>{{ heroSkills.collapsed ? "expand_more" : "expand_less"}}</igx-icon>
@@ -12,16 +12,16 @@
     <igx-expansion-panel-body>
       <div class="skills">
         <div class="skill">
-          <h4>Active</h4>
-          <app-badge *ngFor="let skill of class.skills.active"
-            [image]="mediaService.getUrl(skill.icon, 'skills', '42')" [passive]="false">
+          <h4 class="skill__header--active">Active</h4>
+          <app-badge *ngFor="let skill of class.skills.active" [name]="skill.name"
+            [image]="mediaService.getUrl(skill.icon, types.skill, sizes.medium)" [passive]="false">
             <div class="skill__description" [innerHTML]="skill.descriptionHtml"></div>
           </app-badge>
         </div>
         <div class="skill">
-          <h4>Passive</h4>
-          <app-badge *ngFor="let skill of class.skills.passive"
-            [image]="mediaService.getUrl(skill.icon, 'skills', '42')" [passive]="true">
+          <h4 class="skill__header--passive">Passive</h4>
+          <app-badge *ngFor="let skill of class.skills.passive" [name]="skill.name"
+            [image]="mediaService.getUrl(skill.icon, types.skill, sizes.medium)" [passive]="true">
             <div class="skill__description" [innerHTML]="skill.descriptionHtml"></div>
           </app-badge>
         </div>

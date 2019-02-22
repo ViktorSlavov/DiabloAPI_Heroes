@@ -1,8 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$primary-color: #060606; // dark
+$secondary-color: rgb(202, 176, 122); // light gold
+$success-color:  #5ada80e8; // green
+$error-color: #bb3615d3; // blood-red
+
+$skill: 'skill';
+
+$my-color-palette: igx-palette(
+  $primary: $primary-color,
+  $secondary: $secondary-color
+);
+
+@font-face {
+  font-family: diabloFont;
+  src: url(./fonts/diablo_h.ttf);
+}
+
+@include igx-core();
+@include igx-dark-theme($my-color-palette);
+
+@include igx-typography(
+    $font-family: "diabloFont, sans-serif",
+    $base-color: #f7f7de
+);
+
+
+.igx-card {
+  border: 2px solid #cab07a;
+  margin: 8px 0px;
+}
 
 html, body {
   height: 100%;
 }
 .content p {
   margin: 15px;
+}
+
+.d3-color-gold {
+  color: $secondary-color;
+  font-weight: 600;
+}
+
+.d3-color-green {
+  color: $success-color;
+  font-weight: 600;
+}
+
+.skill__description > p {
+  line-height: 16px;
+  font-size: 16px;
 }

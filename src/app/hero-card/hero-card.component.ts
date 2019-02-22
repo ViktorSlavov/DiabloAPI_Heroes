@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DClass } from '../services/blizz-interfaces';
 import { BlizzardMediaAPIService } from '../services/media.service';
+import { DResourceType, DResourceSize } from '../services/common';
 
 @Component({
   selector: 'app-hero-card',
@@ -8,7 +9,8 @@ import { BlizzardMediaAPIService } from '../services/media.service';
   styleUrls: ['./hero-card.component.scss']
 })
 export class HeroCardComponent implements OnInit {
-
+  public types = DResourceType;
+  public sizes = DResourceSize;
   constructor(public mediaService: BlizzardMediaAPIService) { }
 
   @Input()

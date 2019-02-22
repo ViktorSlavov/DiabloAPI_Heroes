@@ -10,9 +10,9 @@ export interface BlizzAuthToken {
 }
 
 export enum DResourceType {
-    skill = 'skill',
-    item = 'item',
-    portrait = 'portrait'
+    skill = 'skills',
+    item = 'items',
+    portrait = 'portraits'
 }
 
 export enum DResourceSize {
