@@ -9,7 +9,7 @@ import { BlizzardAPIService } from './services/blizzard.service';
 import { IgniteUIModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BadgeComponent } from './badge/badge.component';
-import { BlizzardMediaAPIService } from './services/media.service';
+import { D3MediaPipe } from './services/media.pipes';
 import { HeroCardComponent } from './hero-card/hero-card.component';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { HeroCardComponent } from './hero-card/hero-card.component';
     HomeComponent,
     HomeScreenComponent,
     BadgeComponent,
-    HeroCardComponent
+    HeroCardComponent,
+    D3MediaPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import { HeroCardComponent } from './hero-card/hero-card.component';
     HttpClientModule,
     IgniteUIModule
   ],
-  providers: [BlizzardAPIService, BlizzardMediaAPIService],
+  providers: [BlizzardAPIService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

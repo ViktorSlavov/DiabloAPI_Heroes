@@ -1,6 +1,6 @@
 <igx-card>
   <igx-card-header class="hero__header">
-    <igx-avatar class="hero__image" [src]="mediaService.getUrl(class.icon, types.portrait, sizes.large)" size="medium" roundShape="true"></igx-avatar>
+    <igx-avatar class="hero__image" [src]="class.icon | D3Media:types.portrait:sizes.large" size="medium" roundShape="true"></igx-avatar>
     <div>
       <h3 class="hero__name">{{ class.name.toUpperCase() }}</h3>
     </div>
@@ -14,14 +14,14 @@
         <div class="skill">
           <h4 class="skill__header--active">Active</h4>
           <app-badge *ngFor="let skill of class.skills.active" [name]="skill.name"
-            [image]="mediaService.getUrl(skill.icon, types.skill, sizes.medium)" [passive]="false">
+            [image]="skill.icon | D3Media:types.skill:sizes.medium" [passive]="false">
             <div class="skill__description" [innerHTML]="skill.descriptionHtml"></div>
           </app-badge>
         </div>
         <div class="skill">
           <h4 class="skill__header--passive">Passive</h4>
           <app-badge *ngFor="let skill of class.skills.passive" [name]="skill.name"
-            [image]="mediaService.getUrl(skill.icon, types.skill, sizes.medium)" [passive]="true">
+            [image]="skill.icon | D3Media:types.skill:sizes.medium" [passive]="true">
             <div class="skill__description" [innerHTML]="skill.descriptionHtml"></div>
           </app-badge>
         </div>
